@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "rewrites": [
+    { "source": "/pass", "destination": "/public/pass.html" },
+    { "source": "/api/bot", "destination": "/api/bot.js" },
+    { "source": "/api/pass", "destination": "/api/pass.js" }
+  ],
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
+      ]
+    }
+  ]
+}
